@@ -4,14 +4,22 @@ class round:
     self.length=length
     self.width=width
     self.radius=radius
-  def square(self):
-    print("square = " ,self.side*self.side)
-  def rectangle(self):
-    print("rectangle = ",self.length*self.width)
-  def circle(self):
-    print("round =" ,pow(self.radius,2)*3.14)
+  #!Calculate the area of ​​a square and print
+  def getSquareArea(self):
+    print("square =" ,self.side*self.side)
+  #!Calculate the area of ​​a rectangle and print
+  def getRectangleArea(self):
+    print("rectangle =",self.length*self.width)
+  #!Calculate the area of ​​a circle and print
+  def getCircleArea(self):
+    print("circle =",pow(self.radius,2)*3.14)
+  #!Another way to write
+  # def __str__(self):
+  #   return f"square ={self.side*self.side}\nrectangle={self.length*self.width}\ncircle={pow(self.radius,2)*3.14}"
+
     
 p1=round(5,5,5,5)
-p1.square()
-p1.rectangle()
-p1.circle()
+p1.getSquareArea()
+p1.getRectangleArea()
+p1.getCircleArea()
+# print(p1)

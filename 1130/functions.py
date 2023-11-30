@@ -65,6 +65,7 @@ class student:
         return self.address
     def setaddress(self,value):
         self.address=value
+
 p=student("南台科技大學","資訊工程系","我","蔡佳元","4b0g0046","3","128","10%","南台街一號","雲林縣")
 print(p.getSchool())
 p.setSchool("成功大學")

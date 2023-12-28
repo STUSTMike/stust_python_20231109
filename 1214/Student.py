@@ -57,4 +57,5 @@ for i in text_splut:
 # op.borrow_book("台積電")
 op.return_book("教你投資")
 op.lnquire(124)
-# op.return_book("如何投資")
+op.return_book("如何投資")
+op.lnquire(124)

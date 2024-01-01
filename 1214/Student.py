@@ -45,6 +45,7 @@ class Student:
 
 
 op=Student("小明",124,"財金")
+<<<<<<< Updated upstream
 text=input("你要借的書:")
 text_splut=text.split(",")
 for i in text_splut:
@@ -59,3 +60,13 @@ op.return_book("教你投資")
 op.lnquire(124)
 op.return_book("如何投資")
 op.lnquire(124)
+=======
+op.borrow_book("如何投資")
+op.borrow_book("教你投資")
+op.borrow_book("理財")
+op.borrow_book("郭台銘")
+op.borrow_book("台積電")
+# op.return_book("教你投資")
+op.lnquire_book(124,"台積電")
+# op.return_book("如何投資")
+>>>>>>> Stashed changes

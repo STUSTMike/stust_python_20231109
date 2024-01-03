@@ -15,9 +15,9 @@ class PK(duel):
             while(HP>0 or x.HP>0):
                 print("第{}回合".format(i))  
                 HP=HP-x.attack
-                print(name,age,attack,HP,MP)
+                print(name,age,attack,shield,HP,MP)
                 x.HP=x.HP-attack
-                print(x.name,x.age,x.attack,x.HP,x.MP)
+                print(x.name,x.age,x.attack,x.shield,x.HP,x.MP)
                 i+=1
                 if(HP<=0 or x.HP<=0):
                     break

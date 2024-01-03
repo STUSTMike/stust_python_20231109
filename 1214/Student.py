@@ -6,41 +6,38 @@ class Student:
         self.book=[]
     
     def borrow_book(self,book):
-        self.book.append(book)
+        if len(self.book)<5:
+            self.book.append(book)
+            print("已借書[{}]".format(book))
+        else:
+            print("上限為五本，無法再借書[{}]".format(book))
 
-    def return_book(self,book):
-        for i in self.book:
-            if(i==book):
-                self.book.remove(i)
-                print("已還書[{}]".format(i))
-            
-
+    def return_book(self, book):
+        if book in self.book:
+            self.book.remove(book)
+            print("已還書[{}]".format(book))
+        else:
+            print("你沒有借這本書{}".format(book))
 
     def lnquire(self,ID):
         if(self.ID==ID):
             print("你借得書{}".format(self.book))
 
-    def lnquire_book(self,ID,book):
-        if(self.ID==ID):
-            for i in self.book:
-                if(i==book):
-                    print("你有借這書{}".format(i))      
-
-    def select(self,course):
-        self.course=course
-        print("已加選[{}]。".format(self.course))
+    # def select(self,course):
+    #     self.course=course
+    #     print("已加選[{}]。".format(self.course))
     
    
-    def retreat(self,course):
-        if(self.course==course):
-            self.course=None
-            print("已幫你退選")
-        else:
-            print("沒有查詢到[{}]這門課".format(course))
+    # def retreat(self,course):
+    #     if(self.course==course):
+    #         self.course=None
+    #         print("已幫你退選")
+    #     else:
+    #         print("沒有查詢到[{}]這門課".format(course))
     
-    def lnquire_major(self,ID):
-        if(self.ID==ID):
-            print("你借得書[{}]".format(self.book))
+    # def lnquire_major(self,ID):
+    #     if(self.ID==ID):
+    #         print("你借得書[{}]".format(self.book))
         
 
 
@@ -60,4 +57,4 @@ op.return_book("教你投資")
 op.lnquire(124)
 op.return_book("如何投資")
 op.lnquire(124)
-
+#如何投資,理財,郭台銘,選舉,電競,韓國瑜

@@ -41,7 +41,6 @@ class Student(library):
         self.books.append(book)
     
     def return_book(self, book):
-        super().return_book(book)
         if book in self.books:
             super().return_book(book)
             self.books.remove(book)
@@ -64,6 +63,6 @@ user.borrow(text,"10:20")
 user.borrow(text1,"10:25")
 text.Overview(1)
 user.lnquire("1A")
-user.return_book(text2)
+user.return_book(text1)
 user.lnquire("1A")
 

@@ -8,9 +8,12 @@ class chicken:
         self.client=[]
         self.client_money={}
           
+    #買炸機   
     def buy(self,name,client_money):
         if name in self.name:
+            #加入陣列
             self.client.append(name)
+            #扣錢
             self.client_money=client_money-self.money
             print("你買了{}你剩{}".format(name,self.client_money))
 
@@ -18,7 +21,9 @@ class chicken:
 
     def retreat(self,name):
         if name in self.name:
+            #刪除陣列裡的name
             self.client.remove(name)
+            #並顯示錢
             print("已經幫退了{},需要給你{}".format(name,self.money))
 
 

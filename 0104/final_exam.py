@@ -29,6 +29,7 @@ class chicken:
 
     def change_hot(self,name,hot):
         if name in self.name:
+            #更改辣度
             print("你要把{}改成{}".format(name,hot))
             self.hot=hot
 
